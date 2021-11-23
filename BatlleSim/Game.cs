@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace BatlleSim
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
-        public Form1()
+        Player player = new Player();
+        public Game(string name)
         {
             InitializeComponent();
+            player.Name = name;
+
+            labelPlayer.Text = player.ToString();
         }
     }
 }

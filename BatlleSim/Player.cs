@@ -39,9 +39,8 @@ namespace BatlleSim
         }
         #endregion
 
-        public Player(string nm)
+        public Player()
         {
-            name = nm;
             health = maxHealth;
         }
 
@@ -73,6 +72,11 @@ namespace BatlleSim
             {
                 health = maxHealth;
             }
+        }
+
+        public override string ToString()
+        {
+            return name + "  |  " + health + " HP";
         }
     }
 }
