@@ -12,6 +12,7 @@ namespace BatlleSim
         private string name;
         private int health;
         private int maxAttack;
+        private Random rng = new Random();
         #endregion
 
         #region public variables
@@ -29,6 +30,7 @@ namespace BatlleSim
 
         public int MaxAttack
         {
+            get { return maxAttack; }
             set { maxAttack = value; }
         }
         #endregion
@@ -48,6 +50,16 @@ namespace BatlleSim
             {
                 //Dead
             }
+        }
+
+        public int getAttack()
+        {
+            return rng.Next(0, maxAttack);
+        }
+
+        public override string ToString()
+        {
+            return name + "  |  " + health + " HP";
         }
     }
 }

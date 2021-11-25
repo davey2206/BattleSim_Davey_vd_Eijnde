@@ -27,7 +27,7 @@ namespace BatlleSim
             else
             {
                 name = textBoxPlayer.Text;
-                Game gm = new Game(name);
+                GameForm gm = new GameForm(name);
                 gm.Show();
                 this.Hide();
             }

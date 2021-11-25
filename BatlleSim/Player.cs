@@ -13,6 +13,7 @@ namespace BatlleSim
         private int health;
         private int maxHealth = 100;
         private int maxAttack = 30;
+        private Random rng = new Random();
         #endregion
 
         #region public variables
@@ -35,6 +36,7 @@ namespace BatlleSim
 
         public int MaxAttack
         {
+            get { return maxAttack; }
             set { maxAttack = value; }
         }
         #endregion
@@ -62,6 +64,11 @@ namespace BatlleSim
             {
                 //Dead
             }
+        }
+
+        public int getAttack()
+        {
+            return rng.Next(0, maxAttack);
         }
 
         public void Heal(int healing)
