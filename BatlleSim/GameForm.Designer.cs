@@ -91,8 +91,9 @@ namespace BatlleSim
             // textBox
             // 
             this.textBox.Enabled = false;
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(12, 358);
+            this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(710, 49);
             this.textBox.TabIndex = 3;
@@ -128,6 +129,7 @@ namespace BatlleSim
             this.HealBtn.Text = "First Aid";
             this.HealBtn.UseVisualStyleBackColor = true;
             this.HealBtn.Visible = false;
+            this.HealBtn.Click += new System.EventHandler(this.HealBtn_Click);
             // 
             // FocusBtn
             // 
@@ -138,6 +140,7 @@ namespace BatlleSim
             this.FocusBtn.Text = "Focus";
             this.FocusBtn.UseVisualStyleBackColor = true;
             this.FocusBtn.Visible = false;
+            this.FocusBtn.Click += new System.EventHandler(this.FocusBtn_Click);
             // 
             // BackBtn
             // 

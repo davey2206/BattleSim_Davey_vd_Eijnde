@@ -13,8 +13,8 @@ namespace BatlleSim
     public partial class GameForm : Form
     {
         Player player;
-        Game game = new Game();
         Enemy enemy;
+        Game game = new Game();
         public GameForm(string name)
         {
             InitializeComponent();
@@ -62,6 +62,37 @@ namespace BatlleSim
             BackBtn.Visible = false;
             FocusBtn.Visible = false;
             HealBtn.Visible = false;
+        }
+
+        private void FocusBtn_Click(object sender, EventArgs e)
+        {
+            textBox.Text = game.FocusSkill();
+
+            AttackBtn.Visible = true;
+            SkillBtn.Visible = true;
+            BackBtn.Visible = false;
+            FocusBtn.Visible = false;
+            HealBtn.Visible = false;
+
+            AttackBtn.Enabled = false;
+            SkillBtn.Enabled = false;
+            NextBtn.Enabled = true;
+        }
+
+        private void HealBtn_Click(object sender, EventArgs e)
+        {
+            textBox.Text = game.HealSkill();
+            labelPlayer.Text = player.ToString();
+
+            AttackBtn.Visible = true;
+            SkillBtn.Visible = true;
+            BackBtn.Visible = false;
+            FocusBtn.Visible = false;
+            HealBtn.Visible = false;
+
+            AttackBtn.Enabled = false;
+            SkillBtn.Enabled = false;
+            NextBtn.Enabled = true;
         }
     }
 }

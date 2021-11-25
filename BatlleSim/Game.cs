@@ -75,5 +75,21 @@ namespace BatlleSim
 
             return player.Name + " takes " + d.ToString() + " damege";
         }
+
+        public string FocusSkill()
+        {
+            int a = rng.Next(2, 7);
+            player.IncreaseMaxAttack(a);
+
+            return player.Name + " focuses and gets " + a + "+ max attack damege";
+        }
+
+        public string HealSkill()
+        {
+            int h = rng.Next(10, 30);
+            player.Heal(h);
+
+            return player.Name + " applys first aid healing for " + h + "hp";
+        }
     }
 }

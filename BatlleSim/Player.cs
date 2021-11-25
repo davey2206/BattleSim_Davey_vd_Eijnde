@@ -51,11 +51,6 @@ namespace BatlleSim
             maxAttack = maxAttack + aIncrease;
         }
 
-        public void IncreaseMaxHealth(int aIncrease)
-        {
-            maxHealth = maxHealth + aIncrease;
-        }
-
         public void TakeDamege(int Damege)
         {
             health = health - Damege;
