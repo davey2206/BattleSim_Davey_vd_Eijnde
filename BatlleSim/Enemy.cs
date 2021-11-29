@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BatlleSim
 {
@@ -12,6 +13,7 @@ namespace BatlleSim
         private string name;
         private int health;
         private int maxAttack;
+        private Image picture;
         private Random rng = new Random();
         #endregion
 
@@ -20,6 +22,12 @@ namespace BatlleSim
         {
             get { return name; }
             set { name = value; }
+        }
+
+        public Image Picture
+        {
+            get { return picture; }
+            set { picture = value; }
         }
 
         public int Health
@@ -35,21 +43,24 @@ namespace BatlleSim
         }
         #endregion
 
-        public Enemy(string n, int h, int mA)
+        public Enemy(string n, int h, int mA, Image p)
         {
             name = n;
             health = h;
             maxAttack = mA;
+            picture = p;
         }
 
-        public void TakeDamege(int Damege)
+        public bool TakeDamege(int Damege)
         {
             health = health - Damege;
 
             if (health <= 0)
             {
-                //Dead
+                health = 0;
+                return true;
             }
+            return false;
         }
 
         public int getAttack()

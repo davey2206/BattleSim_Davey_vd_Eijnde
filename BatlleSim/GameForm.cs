@@ -19,31 +19,52 @@ namespace BatlleSim
         {
             InitializeComponent();
 
-            player = game.GetPlayer();
+            player = game.Player;
             player.Name = name;
             labelPlayer.Text = player.ToString();
 
             game.CreateEnemy();
-            enemy = game.GetEnemy();
+            enemy = game.Enemy;
+            pictureBoxEnemey.Image = enemy.Picture;
             labelEnemy.Text = enemy.ToString();
         }
 
         private void AttackBtn_Click(object sender, EventArgs e)
         {
-            textBox.Text = game.PlayerAttack();
+            string attack = game.PlayerAttack();
+            textBox.Text = attack;
+            if (attack.Contains("beaten"))
+            {
+                enemy = game.Enemy;
+                pictureBoxEnemey.Image = enemy.Picture;
+                ScoreLb.Text = game.Score.ToString();
+            }
+            else
+            {
+                AttackBtn.Enabled = false;
+                SkillBtn.Enabled = false;
+                NextBtn.Enabled = true;
+            }
             labelEnemy.Text = enemy.ToString();
-            AttackBtn.Enabled = false;
-            SkillBtn.Enabled = false;
-            NextBtn.Enabled = true;
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            textBox.Text = game.EnemyAttack();
+            string attack = game.EnemyAttack();
             labelPlayer.Text = player.ToString();
-            AttackBtn.Enabled = true;
-            SkillBtn.Enabled = true;
-            NextBtn.Enabled = false;
+            textBox.Text = attack;
+            if (attack == "GAME OVER")
+            {
+                AttackBtn.Enabled = false;
+                SkillBtn.Enabled = false;
+                NextBtn.Enabled = false;
+            }
+            else
+            {
+                AttackBtn.Enabled = true;
+                SkillBtn.Enabled = true;
+                NextBtn.Enabled = false;
+            }
         }
 
         private void SkillBtn_Click(object sender, EventArgs e)

@@ -51,14 +51,16 @@ namespace BatlleSim
             maxAttack = maxAttack + aIncrease;
         }
 
-        public void TakeDamege(int Damege)
+        public bool TakeDamege(int Damege)
         {
             health = health - Damege;
 
             if (health <= 0)
             {
-                //Dead
+                health = 0;
+                return true;
             }
+            return false;
         }
 
         public int getAttack()
