@@ -47,9 +47,10 @@ namespace BatlleSim
             // 
             // AttackBtn
             // 
-            this.AttackBtn.Location = new System.Drawing.Point(248, 231);
+            this.AttackBtn.Location = new System.Drawing.Point(331, 284);
+            this.AttackBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AttackBtn.Name = "AttackBtn";
-            this.AttackBtn.Size = new System.Drawing.Size(60, 50);
+            this.AttackBtn.Size = new System.Drawing.Size(80, 62);
             this.AttackBtn.TabIndex = 2;
             this.AttackBtn.Text = "Attack";
             this.AttackBtn.UseVisualStyleBackColor = true;
@@ -58,18 +59,20 @@ namespace BatlleSim
             // labelEnemy
             // 
             this.labelEnemy.AutoSize = true;
-            this.labelEnemy.Location = new System.Drawing.Point(555, 290);
+            this.labelEnemy.Location = new System.Drawing.Point(740, 357);
+            this.labelEnemy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEnemy.Name = "labelEnemy";
-            this.labelEnemy.Size = new System.Drawing.Size(35, 13);
+            this.labelEnemy.Size = new System.Drawing.Size(46, 17);
             this.labelEnemy.TabIndex = 5;
             this.labelEnemy.Text = "label2";
             // 
             // labelPlayer
             // 
             this.labelPlayer.AutoSize = true;
-            this.labelPlayer.Location = new System.Drawing.Point(9, 290);
+            this.labelPlayer.Location = new System.Drawing.Point(12, 357);
+            this.labelPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPlayer.Name = "labelPlayer";
-            this.labelPlayer.Size = new System.Drawing.Size(35, 13);
+            this.labelPlayer.Size = new System.Drawing.Size(46, 17);
             this.labelPlayer.TabIndex = 6;
             this.labelPlayer.Text = "label1";
             // 
@@ -77,19 +80,21 @@ namespace BatlleSim
             // 
             this.textBox.Enabled = false;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(12, 358);
+            this.textBox.Location = new System.Drawing.Point(16, 441);
+            this.textBox.Margin = new System.Windows.Forms.Padding(4);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(710, 49);
+            this.textBox.Size = new System.Drawing.Size(945, 100);
             this.textBox.TabIndex = 3;
             this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // NextBtn
             // 
             this.NextBtn.Enabled = false;
-            this.NextBtn.Location = new System.Drawing.Point(728, 357);
+            this.NextBtn.Location = new System.Drawing.Point(971, 439);
+            this.NextBtn.Margin = new System.Windows.Forms.Padding(4);
             this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(60, 50);
+            this.NextBtn.Size = new System.Drawing.Size(80, 62);
             this.NextBtn.TabIndex = 7;
             this.NextBtn.Text = "Next";
             this.NextBtn.UseVisualStyleBackColor = true;
@@ -97,9 +102,10 @@ namespace BatlleSim
             // 
             // SkillBtn
             // 
-            this.SkillBtn.Location = new System.Drawing.Point(248, 175);
+            this.SkillBtn.Location = new System.Drawing.Point(331, 215);
+            this.SkillBtn.Margin = new System.Windows.Forms.Padding(4);
             this.SkillBtn.Name = "SkillBtn";
-            this.SkillBtn.Size = new System.Drawing.Size(60, 50);
+            this.SkillBtn.Size = new System.Drawing.Size(80, 62);
             this.SkillBtn.TabIndex = 8;
             this.SkillBtn.Text = "Skill";
             this.SkillBtn.UseVisualStyleBackColor = true;
@@ -107,9 +113,10 @@ namespace BatlleSim
             // 
             // HealBtn
             // 
-            this.HealBtn.Location = new System.Drawing.Point(314, 231);
+            this.HealBtn.Location = new System.Drawing.Point(419, 284);
+            this.HealBtn.Margin = new System.Windows.Forms.Padding(4);
             this.HealBtn.Name = "HealBtn";
-            this.HealBtn.Size = new System.Drawing.Size(175, 50);
+            this.HealBtn.Size = new System.Drawing.Size(233, 62);
             this.HealBtn.TabIndex = 9;
             this.HealBtn.Text = "First Aid";
             this.HealBtn.UseVisualStyleBackColor = true;
@@ -118,9 +125,10 @@ namespace BatlleSim
             // 
             // FocusBtn
             // 
-            this.FocusBtn.Location = new System.Drawing.Point(314, 175);
+            this.FocusBtn.Location = new System.Drawing.Point(419, 215);
+            this.FocusBtn.Margin = new System.Windows.Forms.Padding(4);
             this.FocusBtn.Name = "FocusBtn";
-            this.FocusBtn.Size = new System.Drawing.Size(175, 50);
+            this.FocusBtn.Size = new System.Drawing.Size(233, 62);
             this.FocusBtn.TabIndex = 10;
             this.FocusBtn.Text = "Focus";
             this.FocusBtn.UseVisualStyleBackColor = true;
@@ -129,9 +137,10 @@ namespace BatlleSim
             // 
             // BackBtn
             // 
-            this.BackBtn.Location = new System.Drawing.Point(314, 119);
+            this.BackBtn.Location = new System.Drawing.Point(419, 146);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(4);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(175, 50);
+            this.BackBtn.Size = new System.Drawing.Size(233, 62);
             this.BackBtn.TabIndex = 11;
             this.BackBtn.Text = "Back";
             this.BackBtn.UseVisualStyleBackColor = true;
@@ -142,18 +151,20 @@ namespace BatlleSim
             // 
             this.ScoreLb.AutoSize = true;
             this.ScoreLb.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScoreLb.Location = new System.Drawing.Point(381, 9);
+            this.ScoreLb.Location = new System.Drawing.Point(508, 11);
+            this.ScoreLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScoreLb.Name = "ScoreLb";
-            this.ScoreLb.Size = new System.Drawing.Size(38, 42);
+            this.ScoreLb.Size = new System.Drawing.Size(48, 54);
             this.ScoreLb.TabIndex = 12;
             this.ScoreLb.Text = "0";
             this.ScoreLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxEnemey
             // 
-            this.pictureBoxEnemey.Location = new System.Drawing.Point(558, 12);
+            this.pictureBoxEnemey.Location = new System.Drawing.Point(744, 15);
+            this.pictureBoxEnemey.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxEnemey.Name = "pictureBoxEnemey";
-            this.pictureBoxEnemey.Size = new System.Drawing.Size(230, 271);
+            this.pictureBoxEnemey.Size = new System.Drawing.Size(307, 334);
             this.pictureBoxEnemey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEnemey.TabIndex = 1;
             this.pictureBoxEnemey.TabStop = false;
@@ -161,18 +172,20 @@ namespace BatlleSim
             // pictureBoxPlayer
             // 
             this.pictureBoxPlayer.Image = global::BatlleSim.Properties.Resources.player;
-            this.pictureBoxPlayer.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxPlayer.Location = new System.Drawing.Point(16, 15);
+            this.pictureBoxPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxPlayer.Name = "pictureBoxPlayer";
-            this.pictureBoxPlayer.Size = new System.Drawing.Size(230, 271);
+            this.pictureBoxPlayer.Size = new System.Drawing.Size(307, 334);
             this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPlayer.TabIndex = 0;
             this.pictureBoxPlayer.TabStop = false;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.ScoreLb);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.FocusBtn);
@@ -185,6 +198,7 @@ namespace BatlleSim
             this.Controls.Add(this.AttackBtn);
             this.Controls.Add(this.pictureBoxEnemey);
             this.Controls.Add(this.pictureBoxPlayer);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";

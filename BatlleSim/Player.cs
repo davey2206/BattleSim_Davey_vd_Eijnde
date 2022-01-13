@@ -51,7 +51,7 @@ namespace BatlleSim
             maxAttack = maxAttack + aIncrease;
         }
 
-        public bool TakeDamege(int Damege)
+        public bool TakeDamage(int Damege)
         {
             health = health - Damege;
 
@@ -80,7 +80,7 @@ namespace BatlleSim
 
         public override string ToString()
         {
-            return name + "  |  " + health + " HP";
+            return name + "  |  " + health + " HP | "+ maxAttack + " Max Attack";
         }
     }
 }

@@ -53,7 +53,7 @@ namespace BatlleSim
         public string PlayerAttack()
         {
             int d = player.getAttack();
-            bool dead = enemy.TakeDamege(d);
+            bool dead = enemy.TakeDamage(d);
             if (dead)
             {
                 string oldEnemy = enemy.Name;
@@ -70,13 +70,13 @@ namespace BatlleSim
                 return player.Name + " crits the " + enemy.Name + " for " + d.ToString();
             }
 
-            return "the " + enemy.Name +  " takes " + d.ToString() + " damege";
+            return "the " + enemy.Name +  " takes " + d.ToString() + " damage";
         }
 
         public string EnemyAttack()
         {
             int d = enemy.getAttack();
-            bool dead = player.TakeDamege(d);
+            bool dead = player.TakeDamage(d);
             if (dead)
             {
                 return "GAME OVER";
@@ -90,7 +90,7 @@ namespace BatlleSim
                 return "the " + enemy.Name + " crits " + player.Name + " for " + d.ToString();
             }
 
-            return player.Name + " takes " + d.ToString() + " damege";
+            return player.Name + " takes " + d.ToString() + " damage";
         }
 
         public string FocusSkill()
@@ -98,7 +98,7 @@ namespace BatlleSim
             int a = rng.Next(2, 7);
             player.IncreaseMaxAttack(a);
 
-            return player.Name + " focuses and gets " + a + "+ max attack damege";
+            return player.Name + " focuses and gets " + a + "+ max attack damage";
         }
 
         public string HealSkill()

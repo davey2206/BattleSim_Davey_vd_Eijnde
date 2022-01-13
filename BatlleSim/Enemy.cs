@@ -51,7 +51,7 @@ namespace BatlleSim
             picture = p;
         }
 
-        public bool TakeDamege(int Damege)
+        public bool TakeDamage(int Damege)
         {
             health = health - Damege;
 

@@ -12,21 +12,18 @@ namespace BatlleSim
 {
     public partial class GameForm : Form
     {
-        Player player;
-        Enemy enemy;
         Game game = new Game();
         public GameForm(string name)
         {
             InitializeComponent();
 
-            player = game.Player;
-            player.Name = name;
-            labelPlayer.Text = player.ToString();
+            
+            game.Player.Name = name;
+            labelPlayer.Text = game.Player.ToString();
 
             game.CreateEnemy();
-            enemy = game.Enemy;
-            pictureBoxEnemey.Image = enemy.Picture;
-            labelEnemy.Text = enemy.ToString();
+            pictureBoxEnemey.Image = game.Enemy.Picture;
+            labelEnemy.Text = game.Enemy.ToString();
         }
 
         private void AttackBtn_Click(object sender, EventArgs e)
@@ -35,8 +32,7 @@ namespace BatlleSim
             textBox.Text = attack;
             if (attack.Contains("beaten"))
             {
-                enemy = game.Enemy;
-                pictureBoxEnemey.Image = enemy.Picture;
+                pictureBoxEnemey.Image = game.Enemy.Picture;
                 ScoreLb.Text = game.Score.ToString();
             }
             else
@@ -45,13 +41,13 @@ namespace BatlleSim
                 SkillBtn.Enabled = false;
                 NextBtn.Enabled = true;
             }
-            labelEnemy.Text = enemy.ToString();
+            labelEnemy.Text = game.Enemy.ToString();
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
             string attack = game.EnemyAttack();
-            labelPlayer.Text = player.ToString();
+            labelPlayer.Text = game.Player.ToString();
             textBox.Text = attack;
             if (attack == "GAME OVER")
             {
@@ -103,7 +99,7 @@ namespace BatlleSim
         private void HealBtn_Click(object sender, EventArgs e)
         {
             textBox.Text = game.HealSkill();
-            labelPlayer.Text = player.ToString();
+            labelPlayer.Text = game.Player.ToString();
 
             AttackBtn.Visible = true;
             SkillBtn.Visible = true;
